@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beta Beti Education Hub | Physics Coaching Gwalior</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#4e3d00",
+                        "surface-tint": "#4c56af",
+                        "on-surface-variant": "#454652",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#4a148c",
+                        "secondary-fixed": "#eddcff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#e0e0ff",
+                        "tertiary-fixed": "#ffe088",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#5a2a9c",
+                        "primary": "#000666",
+                        "secondary-fixed-dim": "#d7baff",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#b889ff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#767683",
+                        "outline-variant": "#c6c5d4",
+                        "on-error": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#8690ee",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#000767",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary": "#7345b6",
+                        "on-secondary-fixed": "#280056",
+                        "tertiary": "#735c00",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-container": "#1a237e",
+                        "surface-dim": "#dadada",
+                        "tertiary-container": "#cba72f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1280px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Poppins"],
+                        "headline-md": ["Poppins"],
+                        "label-lg": ["Inter"],
+                        "display-md": ["Poppins"],
+                        "display-lg": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-md": ["36px", {"lineHeight": "1.25", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .floating-cta {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary/70 backdrop-blur-xl border-b border-white/30 dark:border-primary-fixed/20 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-base">
+<div class="font-display-md text-display-md font-bold text-primary dark:text-primary-fixed tracking-tight">
+                Beta Beti Hub
+            </div>
+<div class="hidden md:flex items-center gap-lg font-body-md text-body-md font-semibold">
+<a class="text-tertiary dark:text-tertiary-fixed-dim border-b-2 border-tertiary pb-1" href="#home">Home</a>
+<a class="text-on-surface dark:text-on-primary-fixed hover:text-secondary transition-colors" href="#courses">Courses</a>
+<a class="text-on-surface dark:text-on-primary-fixed hover:text-secondary transition-colors" href="#results">Results</a>
+<a class="text-on-surface dark:text-on-primary-fixed hover:text-secondary transition-colors" href="#faculty">Faculty</a>
+<a class="text-on-surface dark:text-on-primary-fixed hover:text-secondary transition-colors" href="#gallery">Gallery</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden lg:block font-label-lg text-secondary px-md py-xs border-2 border-secondary rounded-lg active:scale-95 transition-transform">Contact</button>
+<button class="bg-primary text-on-primary font-label-lg px-md py-base rounded-lg active:scale-95 transition-transform hover:opacity-80">Enroll Now</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-xl min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5" id="home">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10">
+<div class="space-y-md">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-tertiary-container/30 text-on-tertiary-container rounded-full font-label-lg uppercase">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+                    Elite Physics Education
+                </div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Physics Coaching for <span class="text-secondary">Class 11th &amp; 12th</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Master the laws of nature with expert guidance. Separate Batches for <span class="font-bold text-primary">Hindi &amp; English Medium</span> students to ensure zero communication gaps.
+                </p>
+<div class="flex flex-wrap gap-md pt-base">
+<button class="bg-primary text-on-primary font-label-lg px-lg py-md rounded-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Enroll Now</button>
+<button class="border-2 border-secondary text-secondary font-label-lg px-lg py-md rounded-xl hover:bg-secondary/5 transition-all active:scale-95">Contact Us</button>
+</div>
+<div class="flex items-center gap-sm pt-md">
+<div class="p-base bg-white shadow-md rounded-full">
+<span class="material-symbols-outlined text-tertiary">call</span>
+</div>
+<div>
+<p class="text-label-md text-on-surface-variant uppercase">Admissions Open</p>
+<p class="text-headline-md text-primary font-bold">9165389000</p>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] lg:h-[600px] w-full reveal">
+<!-- STITCH_THREEJS_START:ANIMATION_1 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_1" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_1');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0xd4af37, 1);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
+
+// Abstract "Excellence" Geometry - A stylized book or shield-like form
+const group = new THREE.Group();
+
+const geometry = new THREE.BoxGeometry(1.5, 2, 0.3);
+const material = new THREE.MeshPhongMaterial({ 
+    color: 0x4A148C,
+    shininess: 100,
+    specular: 0xd4af37
+});
+const book = new THREE.Mesh(geometry, material);
+group.add(book);
+
+// Adding a "Gold Spine"
+const spineGeom = new THREE.BoxGeometry(0.1, 2.1, 0.4);
+const spineMat = new THREE.MeshPhongMaterial({ color: 0xd4af37 });
+const spine = new THREE.Mesh(spineGeom, spineMat);
+spine.position.x = -0.75;
+group.add(spine);
+
+// Orbiting particles/stars
+const starsGeometry = new THREE.BufferGeometry();
+const starsCount = 100;
+const posArray = new Float32Array(starsCount * 3);
+for(let i=0; i < starsCount * 3; i++) {
+    posArray[i] = (Math.random() - 0.5) * 10;
+}
+starsGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const starsMaterial = new THREE.PointsMaterial({ size: 0.05, color: 0xd4af37 });
+const starField = new THREE.Points(starsGeometry, starsMaterial);
+scene.add(starField);
+
+scene.add(group);
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    group.rotation.y += 0.01;
+    group.rotation.x += 0.005;
+    starField.rotation.y += 0.002;
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_1 -->
+<!-- Decorative glass panel behind scene -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-secondary-container/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Learning Environment" class="w-full h-full object-cover" data-alt="A modern university library setting with students engaged in deep study, illuminated by warm focused lighting. The environment is scholarly and prestigious, reflecting a high-end educational institution with premium furniture and a quiet, intellectual atmosphere. Deep navy and gold accents are subtly integrated into the background décor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4UzOZhjqAJDplV78aqMdZ8kHh-tfl4_OzsqwNIaKBRnHKpXqwIXSci3-kWQIvCNYe4ozO_ty5iaTnZL-wxrsvq5HJX77fwDBoA2mN3ojgIwgk0ixTdh5XX9JMW8HJLffNbxbuOrf-wT3UyscpttZ-dWCVJo6NrI8u7GYi0z1ddqOVTockkUNdqjukbuelihO92KVQ-mZsIQnGWW-XbBKUdABu39-ymU7wBj59s23F-sE10F5TeRs2nLuTNsRZ6MRdPl5P_ax-VjE"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-md reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary">Trusted Physics Coaching in Gwalior</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Beta Beti Education Hub is more than just a coaching center; it's a sanctuary for aspiring scientists. Located in the heart of Gwalior at Imli Naka, we specialize in simplifying complex physical concepts for Class 11th and 12th students.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our curriculum is meticulously designed to bridge the gap between board examinations and competitive entrance tests, ensuring our students excel in both arenas.
+                    </p>
+<div class="grid grid-cols-2 gap-md pt-base">
+<div class="border-l-4 border-tertiary pl-md">
+<h4 class="font-headline-md text-primary">10+ Years</h4>
+<p class="text-label-md text-on-surface-variant">Legacy of Excellence</p>
+</div>
+<div class="border-l-4 border-tertiary pl-md">
+<h4 class="font-headline-md text-primary">1000+</h4>
+<p class="text-label-md text-on-surface-variant">Students Mentored</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses Grid -->
+<section class="py-xl bg-surface-container-low" id="courses">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-base">Our Specialized Programs</h2>
+<p class="text-body-md text-on-surface-variant max-w-2xl mx-auto">Tailored coaching paths designed for academic brilliance and foundation building.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Card 1 -->
+<div class="glass-card p-lg rounded-2xl border-t-2 border-tertiary flex flex-col hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] mb-md">school</span>
+<h3 class="font-headline-md text-primary mb-sm">Class 11th</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg flex-grow">Foundation building for Physics, covering mechanics, thermodynamics, and waves.</p>
+<button class="text-secondary font-label-lg flex items-center gap-xs hover:gap-sm transition-all">Details <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-lg rounded-2xl border-t-2 border-tertiary flex flex-col hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] mb-md">history_edu</span>
+<h3 class="font-headline-md text-primary mb-sm">Class 12th</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg flex-grow">In-depth focus on Electromagnetism, Optics, and Modern Physics for final boards.</p>
+<button class="text-secondary font-label-lg flex items-center gap-xs hover:gap-sm transition-all">Details <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-lg rounded-2xl border-t-2 border-tertiary flex flex-col hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] mb-md">assignment_turned_in</span>
+<h3 class="font-headline-md text-primary mb-sm">Board Prep</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg flex-grow">Rigorous revision, previous year paper solving, and time management strategies.</p>
+<button class="text-secondary font-label-lg flex items-center gap-xs hover:gap-sm transition-all">Details <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-lg rounded-2xl border-t-2 border-tertiary flex flex-col hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] mb-md">rocket_launch</span>
+<h3 class="font-headline-md text-primary mb-sm">Competitive</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg flex-grow">Strengthening conceptual roots for JEE/NEET through advanced problem-solving.</p>
+<button class="text-secondary font-label-lg flex items-center gap-xs hover:gap-sm transition-all">Details <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Features -->
+<section class="py-xl bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">Why Choose Beta Beti?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h4 class="font-label-lg text-primary">Small Batches</h4>
+<p class="text-body-sm text-on-surface-variant">Personalized attention for every single student.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">help_center</span>
+</div>
+<h4 class="font-label-lg text-primary">Doubt Classes</h4>
+<p class="text-body-sm text-on-surface-variant">Daily doubt clearing sessions after standard lectures.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<h4 class="font-label-lg text-primary">Regular Tests</h4>
+<p class="text-body-sm text-on-surface-variant">Weekly assessments to track performance and progress.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h4 class="font-label-lg text-primary">Notes Provided</h4>
+<p class="text-body-sm text-on-surface-variant">Comprehensive hand-written and printed study materials.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<h4 class="font-label-lg text-primary">Bilingual Batches</h4>
+<p class="text-body-sm text-on-surface-variant">Fluent teaching in both Hindi &amp; English mediums.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">person_check</span>
+</div>
+<h4 class="font-label-lg text-primary">Expert Faculty</h4>
+<p class="text-body-sm text-on-surface-variant">Learn from the best subject matter experts in Gwalior.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<h4 class="font-label-lg text-primary">Timely Course</h4>
+<p class="text-body-sm text-on-surface-variant">Syllabus completion well before board examinations.</p>
+</div>
+<div class="text-center space-y-sm reveal">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-primary">
+<span class="material-symbols-outlined">stars</span>
+</div>
+<h4 class="font-label-lg text-primary">Scholarship</h4>
+<p class="text-body-sm text-on-surface-variant">Special incentives for top-performing students.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<section class="py-xl bg-primary text-on-primary" id="results">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary-fixed mb-base">Consistency in Excellence</h2>
+<p class="text-body-lg text-primary-fixed max-w-xl">Our students have consistently set the bar high. Join the hall of fame with our result-oriented methodology.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-md rounded-xl border border-white/20">
+<p class="font-label-lg text-tertiary-fixed">Upto 50% Scholarship for 90%+ Scorers</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-md">
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-tertiary-fixed-dim">97%</div>
+<p class="text-label-md uppercase opacity-70">Highest</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">96%</div>
+<p class="text-label-md uppercase opacity-70">Distinction</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">94%</div>
+<p class="text-label-md uppercase opacity-70">Top Scorer</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">93%</div>
+<p class="text-label-md uppercase opacity-70">Top Scorer</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">92%</div>
+<p class="text-label-md uppercase opacity-70">Top Scorer</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">91%</div>
+<p class="text-label-md uppercase opacity-70">Top Scorer</p>
+</div>
+<div class="glass-card p-md rounded-xl text-center border-white/10 bg-white/5 reveal">
+<div class="text-display-md font-bold text-white">90%</div>
+<p class="text-label-md uppercase opacity-70">Top Scorer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty -->
+<section class="py-xl bg-white" id="faculty">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md reveal">
+<div class="inline-block px-md py-xs bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-lg">Meet Our Director</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Academic Leadership</h2>
+<p class="text-body-md text-on-surface-variant">"Physics is not just about formulas; it's about seeing the world through a logical lens. Our mission is to make every student fall in love with the subject."</p>
+<div class="bg-surface-container p-lg rounded-2xl border-l-4 border-secondary">
+<h4 class="text-headline-md text-primary">Shantanu Sharma</h4>
+<p class="text-label-lg text-secondary uppercase font-bold">M.Sc. Physics</p>
+<ul class="mt-md space-y-base text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span> 10+ Years of teaching experience</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span> Board Expert &amp; Conceptual Mentor</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span> Specialized in JEE/NEET Foundations</li>
+</ul>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
+<div class="relative rounded-3xl overflow-hidden glass-card p-md">
+<img alt="Shantanu Sharma" class="w-full h-[500px] object-cover rounded-2xl" data-alt="Professional portrait of a friendly and experienced male academic teacher in a professional setting. He wears a formal blazer and is surrounded by a blurry background of a high-end educational hub. The lighting is soft and flattering, with a modern ivory-tower aesthetic using deep blue and gold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSk0yoUGc1qGjECC-qRy-Ob2YRtoS4z6q1TLLGM2f3UUt7X6IEEVxCo3rdlgRvWoMuSSOKPPPl5I5S-RmZX-HzZ2QQmOlugc-s7mESMwf5wGKMme6CJOaZlSPkhmn_wR23UjUKwV5AiLfiHz7Xkk_HAgauG6dR61rfyYxqDEpIgS3fNGcNznCRSdQk4azmNNbwN2Ie51bWDKOKSOf4MxjteE4QOXOrfA4eaS3xPjqcHkKE4VvB2m4XYQZkbFCbMfloTvPZZFnrDoY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">Student Speak</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="glass-card p-lg rounded-2xl reveal">
+<div class="flex text-tertiary mb-base">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md italic text-on-surface mb-lg">"The way Shantanu Sir explains concepts makes even the hardest topics seem easy. Best coaching for Physics in Gwalior."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">A</div>
+<div>
+<p class="font-label-lg">Aditya Raj</p>
+<p class="text-body-sm text-on-surface-variant">Class 12th Student</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-lg rounded-2xl reveal" style="transition-delay: 100ms;">
+<div class="flex text-tertiary mb-base">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md italic text-on-surface mb-lg">"Separate batches for Hindi medium students was a lifesaver for me. I could finally ask questions without hesitation."</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">P</div>
+<div>
+<p class="font-label-lg">Priya Sharma</p>
+<p class="text-body-sm text-on-surface-variant">Board Topper</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-lg rounded-2xl reveal" style="transition-delay: 200ms;">
+<div class="flex text-tertiary mb-base">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md italic text-on-surface mb-lg">"Doubt classes helped me clear all my concepts before the board exams. Highly recommend Beta Beti Hub!"</p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">R</div>
+<div>
+<p class="font-label-lg">Rahul V.</p>
+<p class="text-body-sm text-on-surface-variant">Class 11th Student</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery -->
+<section class="py-xl bg-white" id="gallery">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">Life at the Hub</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+<div class="h-64 rounded-xl overflow-hidden group">
+<img alt="Lab Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of Physics experiment apparatus in a clean laboratory setting. Soft bokeh background of an educational hub with students observing in the distance. The lighting is crisp and modern, featuring golden highlights and deep blue shadows that align with the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQO0ChEzID-a4TCKxk5YBDDf-U-dQ40alG3i8wA5eQAVAbar4mefGASzGrVWI5xcz7VKj39pqhq6Z6Z1Imgp_AVEqjCbUJYydAdmhi4UqqR1lOkpR1qif_q96hUxmzTKpAbxIlswOxL0Q1LKZ46XcfBQYsHoAm9UhMpzKyyfmxajHA4uUNNfpOoS6RwDfUFNl-LJX1Y9mnKmjlWWDdibfCjxlx2dtHfWYxKy5mID9p48cO0zpbF13tuPH5N93VvvsB0pcFLWEZ3Y"/>
+</div>
+<div class="h-64 rounded-xl overflow-hidden group md:col-span-2">
+<img alt="Classroom" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Wide shot of a focused classroom environment where students are actively participating in a lecture. The professor is gesturing towards a whiteboard filled with clear physics diagrams. The room is bright and modern with a professional ivory-tower aesthetic and high-end educational furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgDDWGTikTiJEvUaQocv1M2K43rfDwGIDgQlHaurFoN3rDJlg0uknbTaB9aCsIOeO4GBYBu21zZJda6h6qUG6B3KA5OcBWEqF4asOpTj90jJL1SmLcXagF7QQxevRVrLKDOvaxWLPm_RMrwt-UMwSEAd8bHm2UdM834PVzDd5fQNY3R5WWSGBAKO98TTVBaepWsFASmZHU6amu5inPIb-VC8m2JvKGTQLEc2XxeC-P7_8yU7uj6y_PXaJCdaiQZyQdQnlYNpSqnoQ"/>
+</div>
+<div class="h-64 rounded-xl overflow-hidden group">
+<img alt="Self Study" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Top down view of a student's desk with organized study materials, a sleek laptop, and open physics textbooks with diagrams. The workspace is pristine and minimalist, reflecting a dedicated learning focus. Touches of gold and navy are seen in the stationary and environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe1_z4u-a7P8TmXMQWuonqSO5Cf3sNpsNWUVCaFvNfyQNrI6kS3cqOuGSp5zDtbKTDDDjLrVW0R-nT4J8EHv_3emkUJ0Xhw_mzAVA0VKTISpfBBCYdXxCljlX5p6nUMOtcUD2JOC11Yz7GOh_fGsx1lgKClGFbJ9suVvB1qZSAlGAq4gn963oALz8o13e-8808t50CpncpEbxMYhoCe_7-X2S1hGm_F5b760dwa76s4Yv3t85cUIgLSdwPHfdt9YMILfHg1n3vCgg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Admission CTA -->
+<section class="py-xl bg-surface-container-high relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
+<div class="inline-block px-md py-xs bg-error text-on-error rounded-full font-label-lg mb-md floating-cta">Limited Seats Available!</div>
+<h2 class="font-display-md text-display-md text-primary mb-md">New Batch Starting Soon</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg">Don't miss the chance to learn from Gwalior's best. Secure your admission today for the 2026-27 session.</p>
+<button class="bg-primary text-on-primary font-headline-md px-xl py-md rounded-2xl shadow-xl hover:scale-105 transition-all">Register Now</button>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-xl bg-white">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="space-y-lg reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary">Get in Touch</h2>
+<form class="space-y-md">
+<div>
+<label class="font-label-lg text-on-surface-variant block mb-xs">Full Name</label>
+<input class="w-full p-md border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary bg-surface transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="font-label-lg text-on-surface-variant block mb-xs">Phone Number</label>
+<input class="w-full p-md border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary bg-surface transition-all" placeholder="+91" type="tel"/>
+</div>
+<div>
+<label class="font-label-lg text-on-surface-variant block mb-xs">Class</label>
+<select class="w-full p-md border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary bg-surface transition-all">
+<option>Class 11th</option>
+<option>Class 12th</option>
+<option>Foundation</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-lg text-on-surface-variant block mb-xs">Message</label>
+<textarea class="w-full p-md border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary bg-surface transition-all" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md py-md rounded-xl hover:opacity-90 transition-opacity">Submit Inquiry</button>
+</form>
+</div>
+<div class="space-y-md reveal">
+<h3 class="font-headline-md text-primary">Visit Our Hub</h3>
+<p class="text-body-md text-on-surface-variant">Near Imli Naka, Gwalior, Madhya Pradesh</p>
+<div class="rounded-2xl overflow-hidden shadow-lg h-[400px] border border-outline-variant">
+<iframe allowfullscreen="" data-location="Gwalior" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14318.00000000000!2d78.1700000000000!3d26.2200000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c6bb11111111%3A0x1111111111111111!2sGwalior%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp Button -->
+<a class="fixed bottom-gutter right-gutter z-50 bg-[#25D366] text-white p-md rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform" href="https://wa.me/9165389000">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+<!-- Footer -->
+<footer class="w-full pt-xl pb-md bg-primary dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="space-y-md">
+<div class="font-headline-md text-headline-md font-bold text-tertiary-fixed">Beta Beti Hub</div>
+<p class="font-body-sm text-body-sm text-on-primary/80">Premium Physics Coaching in Gwalior. Empowering students for a brighter academic future.</p>
+</div>
+<div>
+<h4 class="font-label-lg text-tertiary-fixed mb-md">Quick Links</h4>
+<ul class="space-y-base font-body-sm">
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#home">Home</a></li>
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#courses">Courses</a></li>
+<li><a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#results">Results</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-tertiary-fixed mb-md">Contact Us</h4>
+<p class="text-on-primary/80 font-body-sm mb-xs">Imli Naka, Gwalior (MP)</p>
+<p class="text-on-primary/80 font-body-sm mb-xs">+91 9165389000</p>
+<p class="text-on-primary/80 font-body-sm">info@betabetihub.com</p>
+</div>
+<div>
+<h4 class="font-label-lg text-tertiary-fixed mb-md">Follow Us</h4>
+<div class="flex gap-md">
+<a class="text-on-primary/80 hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="text-on-primary/80 hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+<a class="text-on-primary/80 hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">linked_camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-xl pt-md border-t border-white/10 text-center">
+<p class="font-body-sm text-body-sm text-on-primary/50">© 2026 Beta Beti Education Hub. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

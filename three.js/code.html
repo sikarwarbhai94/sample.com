@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_1 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_1" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_1');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0xd4af37, 1);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
+
+// Abstract "Excellence" Geometry - A stylized book or shield-like form
+const group = new THREE.Group();
+
+const geometry = new THREE.BoxGeometry(1.5, 2, 0.3);
+const material = new THREE.MeshPhongMaterial({ 
+    color: 0x4A148C,
+    shininess: 100,
+    specular: 0xd4af37
+});
+const book = new THREE.Mesh(geometry, material);
+group.add(book);
+
+// Adding a "Gold Spine"
+const spineGeom = new THREE.BoxGeometry(0.1, 2.1, 0.4);
+const spineMat = new THREE.MeshPhongMaterial({ color: 0xd4af37 });
+const spine = new THREE.Mesh(spineGeom, spineMat);
+spine.position.x = -0.75;
+group.add(spine);
+
+// Orbiting particles/stars
+const starsGeometry = new THREE.BufferGeometry();
+const starsCount = 100;
+const posArray = new Float32Array(starsCount * 3);
+for(let i=0; i < starsCount * 3; i++) {
+    posArray[i] = (Math.random() - 0.5) * 10;
+}
+starsGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const starsMaterial = new THREE.PointsMaterial({ size: 0.05, color: 0xd4af37 });
+const starField = new THREE.Points(starsGeometry, starsMaterial);
+scene.add(starField);
+
+scene.add(group);
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    group.rotation.y += 0.01;
+    group.rotation.x += 0.005;
+    starField.rotation.y += 0.002;
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_1 -->
+</body>
+</html>
